@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NativeBaseProvider, StatusBar } from 'native-base';
+import { Home } from './src/screens/Home';
+import { Profile } from './src/screens/Profile';
+import { THEME } from './src/styles/theme';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>CadêMeuFilho App!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NativeBaseProvider  theme={THEME}>
+      <StatusBar 
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Home />
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
