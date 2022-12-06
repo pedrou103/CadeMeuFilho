@@ -1,15 +1,16 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useTheme } from "native-base";
-import sizes from "native-base/lib/typescript/theme/base/sizes";
+import { House, User } from "phosphor-react-native";
 import { Platform } from "react-native";
 import { Home } from "../screens/Home";
 import { Profile } from "../screens/Profile";
-
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
 export function RoutesConfig () {
     const { colors, sizes } = useTheme();
+
+    const size = sizes[6];
 
     return (
         <Navigator
@@ -32,11 +33,19 @@ export function RoutesConfig () {
             <Screen
             name="home"
             component={Home}
-            options={{tabBarIcon: () => <House size={32} /> }}/>
+            options={{
+                tabBarIcon: () => <House size={size}/>,
+                tabBarLabel:'Home' 
+            }}
+            />
             <Screen
             name="profile"
             component={Profile}
-            options={{tabBarIcon: () => <User size={32} /> }}/>
+            options={{
+                tabBarIcon: () => <User size={size}/>,
+                tabBarLabel: 'Profile' 
+            }}
+            />
         </Navigator>
     )
 }
