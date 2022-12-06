@@ -6,7 +6,7 @@ export function Profile() {
             <VStack mt={8} mx={5} alignItems="center">
 
                 <Text color="white">
-                    tela de perfil
+                    Tela de perfil
                 </Text>
             </VStack>
         </VStack>

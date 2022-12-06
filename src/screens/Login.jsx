@@ -29,7 +29,7 @@ export function Login() {
                     fontSize="5xl"
                     fontFamily="medium"
                 >
-                    Cadê Meu Fi ?
+                    Cadê Meu Fi?
                 </Text>
                 <Input
                     mb={2}
@@ -67,6 +67,7 @@ export function Login() {
                     }}
                     onPress={signIn}
                 />
+                
 
             </Center>
         </VStack >

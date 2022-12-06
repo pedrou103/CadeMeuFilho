@@ -6,7 +6,7 @@ export function Home() {
             <VStack mt={8} mx={5} alignItems="center">
 
                 <Text color="white">
-                    tela de Home
+                    Tela de Home
                 </Text>
             </VStack>
         </VStack>
