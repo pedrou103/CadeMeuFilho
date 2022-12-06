@@ -9,11 +9,9 @@ export function Routes () {
     };
 
     return (
-        <Box>
-            <NavigationContainer flex={1} bg="gray.900">
-                {/* {user.name K} */}
-                {/* {user.name ? <RoutesConfig /> : <Login />} */}
-                <RoutesConfig />
+        <Box flex={1} bg="gray.900">
+            <NavigationContainer>
+                {user.name ? <RoutesConfig /> : <Login />}
             </NavigationContainer>
         </Box>
     )

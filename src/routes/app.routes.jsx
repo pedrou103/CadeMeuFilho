@@ -10,7 +10,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export function RoutesConfig () {
     const { colors, sizes } = useTheme();
 
-    const size = sizes[6];
+    const size = sizes[7];
 
     return (
         <Navigator
@@ -18,32 +18,34 @@ export function RoutesConfig () {
                 headerShow: false,
                 tabBarLabelPosition: "beside-icon",
                 tabBarActiveTintColor: colors.white,
-                tabBarInactiveTintColor: colors.black,
+                tabBarInactiveTintColor: colors.black[300],
                 tabBarStyle: { 
                     position: "absolute",
-                    height: sizes[22],
+                    height: sizes[14],
                     borderTopWidth: 0,
                     backgroundColor: colors.black[700]
                 },
                 tabBarItemStyle: {
                     position: "relative",
-                    top: Platform.OS === "android" ? -10 : 0
+                    top: Platform.OS === "android" ? -5 : 0
                 }
             }}>
             <Screen
             name="home"
             component={Home}
             options={{
-                tabBarIcon: () => <House size={size}/>,
-                tabBarLabel:'Home' 
+                tabBarIcon: ({ color }) => <House color={ color } size={size}/>,
+                tabBarLabel:'',
+                header: () => null 
             }}
             />
             <Screen
             name="profile"
             component={Profile}
             options={{
-                tabBarIcon: () => <User size={size}/>,
-                tabBarLabel: 'Profile' 
+                tabBarIcon: ({ color }) => <User color={ color } size={size}/>,
+                tabBarLabel: '',
+                header: () => null 
             }}
             />
         </Navigator>
