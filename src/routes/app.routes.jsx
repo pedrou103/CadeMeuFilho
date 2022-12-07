@@ -1,9 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useTheme } from "native-base";
-import { House, User } from "phosphor-react-native";
+import { House, MapPin, LockKeyOpen, User } from "phosphor-react-native";
 import { Platform } from "react-native";
 import { Home } from "../screens/Home";
 import { Profile } from "../screens/Profile";
+import { Register } from "../screens/Register";
+import { Track } from "../screens/Track";
+
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -36,6 +39,24 @@ export function RoutesConfig () {
             options={{
                 tabBarIcon: ({ color }) => <House color={ color } size={size}/>,
                 tabBarLabel:'',
+                header: () => null 
+            }}
+            />
+            <Screen
+            name="track"
+            component={Track}
+            options={{
+                tabBarIcon: ({ color }) => <MapPin color={ color } size={size}/>,
+                tabBarLabel: '',
+                header: () => null 
+            }}
+            />
+            <Screen
+            name="register"
+            component={Register}
+            options={{
+                tabBarIcon: ({ color }) => <LockKeyOpen color={ color } size={size}/>,
+                tabBarLabel: '',
                 header: () => null 
             }}
             />
