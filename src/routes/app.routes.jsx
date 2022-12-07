@@ -19,7 +19,7 @@ export function RoutesConfig () {
         <Navigator
             screenOptions={{
                 headerShow: false,
-                tabBarLabelPosition: "beside-icon",
+                tabBarLabelPosition: "below-icon",
                 tabBarActiveTintColor: colors.white,
                 tabBarInactiveTintColor: colors.black[300],
                 tabBarStyle: { 
@@ -30,7 +30,7 @@ export function RoutesConfig () {
                 },
                 tabBarItemStyle: {
                     position: "relative",
-                    top: Platform.OS === "android" ? -5 : 0
+                    top: Platform.OS === "android" ? 5 : 0
                 }
             }}>
             <Screen

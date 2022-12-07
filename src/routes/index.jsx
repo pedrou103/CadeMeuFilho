@@ -3,6 +3,8 @@ import { Box } from "native-base"
 import { Login } from "../screens/Login";
 import { RoutesConfig } from "./app.routes"
 
+import * as Location from 'expo-location';
+
 export function Routes () {
     const user = {
         name: 'Pedro',
