@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useTheme } from "native-base";
-import { House, MapPin, LockKeyOpen, User } from "phosphor-react-native";
+import { House, MapPin, UserPlus, Gear } from "phosphor-react-native";
 import { Platform } from "react-native";
 import { Home } from "../screens/Home";
 import { Profile } from "../screens/Profile";
@@ -55,7 +55,7 @@ export function RoutesConfig () {
             name="register"
             component={Register}
             options={{
-                tabBarIcon: ({ color }) => <LockKeyOpen color={ color } size={size}/>,
+                tabBarIcon: ({ color }) => <UserPlus color={ color } size={size}/>,
                 tabBarLabel: '',
                 header: () => null 
             }}
@@ -64,7 +64,7 @@ export function RoutesConfig () {
             name="profile"
             component={Profile}
             options={{
-                tabBarIcon: ({ color }) => <User color={ color } size={size}/>,
+                tabBarIcon: ({ color }) => <Gear color={ color } size={size}/>,
                 tabBarLabel: '',
                 header: () => null 
             }}
