@@ -16,7 +16,7 @@ export function Login() {
     return (
         <VStack flex={1} bgColor='gray.900'>
             <Center bgColor='black.600' p={8}>
-                <Image source={require('../assets/image1.png')}/>
+                <Image source={require('../assets/image2.png')}/>
             </Center>
             <Center p={7}>
                 <Text

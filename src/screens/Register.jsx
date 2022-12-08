@@ -1,13 +1,10 @@
 import { Center, Text, VStack } from "native-base";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
-// import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
 
 export function Register() {
-    // const {signIn, user} = useAuth();
     const [name, setName] = useState();
-    const [password, setPassword] = useState();
 
     return (
         <VStack flex={1} bgColor='black.900'>
@@ -23,22 +20,18 @@ export function Register() {
                     Cadastro de filho
                 </Text>
                 <Input
-                    mb={2}
-                    mt={2}
-                    placeholder="Name"
+                    mb={4}
+                    mt={4}
+                    placeholder="Informe o nome do seu filho"
                     onChangeText={setName}
                     value={name}
-                />
-                <Input
-                    mt={2}
-                    mb={4}
-                    placeholder="Senha"
-                    onChangeText={setPassword}
-                    value={password}
                 />
                 <Button 
                     title="Cadastrar"
                 />
+                <Text color="white" textAlign="center" mt={4} fontFamily="regular" fontSize="md"> 
+                    Após o cadastro o seu filho somente poderá ser retirado através da opção "Retirada".
+                </Text>
             </Center>
         </VStack >
     )
