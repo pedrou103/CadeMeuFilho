@@ -9,11 +9,9 @@ import { useState } from "react";
 
 export function Login() {
     const {signIn, user} = useAuth();
+
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
-    console.log(user);
-
 
     return (
         <VStack flex={1} bgColor='gray.900'>
@@ -67,8 +65,6 @@ export function Login() {
                     }}
                     onPress={signIn}
                 />
-                
-
             </Center>
         </VStack >
     )

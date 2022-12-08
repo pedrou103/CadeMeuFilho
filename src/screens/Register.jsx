@@ -1,22 +1,16 @@
-import { Center, Text, Icon, VStack, Button as ButtonByNativeBase } from "native-base"
-import { Image } from "react-native"
-import { Fontisto, AntDesign } from '@expo/vector-icons';
-
-import { Input } from "../components/Input"
+import { Center, Text, VStack } from "native-base";
+import { Input } from "../components/Input";
 import { Button } from "../components/Button";
-import { useAuth } from "../hooks/useAuth";
+// import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
 
 export function Register() {
-    const {signIn, user} = useAuth();
+    // const {signIn, user} = useAuth();
     const [name, setName] = useState();
     const [password, setPassword] = useState();
 
-    console.log(user);
-
     return (
-        <VStack flex={1} bgColor='gray.900'>
-            
+        <VStack flex={1} bgColor='black.900'>
             <Center p={7}>
                 <Text
                     color="white"
@@ -46,8 +40,6 @@ export function Register() {
                     title="Cadastrar"
                 />
             </Center>
-            
         </VStack >
     )
-
 }

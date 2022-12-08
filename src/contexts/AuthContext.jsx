@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import * as Google from "expo-auth-session/providers/google";
 import * as AuthSession from "expo-auth-session";
 import * as WebBrowser from "expo-web-browser";
+import { z } from "zod";
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -19,6 +20,39 @@ export function AuthContextProvider({ children }) {
 
     async function signWithGoogle(access_token) {
         console.log(`Token de autenticação: ${access_token}`)
+
+        try {
+            setIsUserLoading(true);
+
+            const response = await fetch("https://www.googleapis.com/oauth2/v2/userinfo", {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${access_token}`,
+                },
+            })
+
+            const userData = await response.json();
+
+            const userInfoSchema = z.object({
+                id: z.string(),
+                email: z.string().email(),
+                name: z.string(),
+                picture: z.string().url(),
+            });
+            
+            const userTeste = userInfoSchema.parse(userData);
+            
+            setUser(userTeste);
+            console.log(typeof(userData));
+
+            console.log('')
+            console.log(user)
+        } catch (err) {
+            console.log(err);
+            throw err;
+        } finally {
+            setIsUserLoading(false);
+        }
     }
 
     async function signIn() {
@@ -35,9 +69,11 @@ export function AuthContextProvider({ children }) {
     }
 
     useEffect(() => {
+        console.log('entrou aqui')
         if (response?.type === 'success' && response.authentication?.accessToken) {
             signWithGoogle(response.authentication.accessToken)
         }
+        console.log('aaaaaaaaaaaaaaaaaaaa'+response)
     }, [response])
 
     return (

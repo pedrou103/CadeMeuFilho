@@ -1,14 +1,16 @@
 import { NavigationContainer } from "@react-navigation/native"
 import { Box } from "native-base"
+import { useAuth } from "../hooks/useAuth";
 import { Login } from "../screens/Login";
 import { RoutesConfig } from "./app.routes"
 
-import * as Location from 'expo-location';
-
 export function Routes () {
-    const user = {
-        name: 'Pedro',
-    };
+    const user = useAuth();
+    // const user = {
+    //     name: 'Pedro',
+    // };
+
+    console.log(`user em Routes ==> ${user.name}`)
 
     return (
         <Box flex={1} bg="gray.900">

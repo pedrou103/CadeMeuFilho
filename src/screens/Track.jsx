@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { VStack, Text, Box } from "native-base"
-import MapView from "react-native-maps"
-import { StyleSheet, View } from 'react-native';
+import React, { useRef } from 'react';
+import { Box } from "native-base"
+import MapView, { PROVIDER_GOOGLE } from "react-native-maps"
+import { StyleSheet} from 'react-native';
 
 import * as Location from 'expo-location';
 import MapCard from '../components/MapCard';
+
+import { DarkModeMap } from '../styles/mapStyle';
 
 export function Track() {
     const mapRef = useRef(null);
@@ -26,12 +28,14 @@ export function Track() {
     const myLocation = async () => {
         const region = await getMyLocation();
 
-        region && mapRef.current?.animateToRegion(region, 1000);
+        region && mapRef.current?.animateToRegion(region, 2000);
     }
 
     return (
         <Box flex={1} bgColor='black.900'>
             <MapView
+                provider={PROVIDER_GOOGLE}
+                customMapStyle={DarkModeMap}
                 style={styles.map}
                 ref={mapRef}
                 onMapReady={() => {myLocation();}}
@@ -45,5 +49,7 @@ const styles = StyleSheet.create({
     map: {
         width: '100%',
         height: '100%',
+        // paddingTop: '10px',
+        
     },
 });
