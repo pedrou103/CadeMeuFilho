@@ -8,7 +8,11 @@ export const THEME = extendTheme({
             600: '#2D2D2D',
             300: '#333334',
         },
-        white: '#FFFFFF'
+        white: '#FFFFFF',
+        green: {
+            500: '#20A362'
+        },
+        
     },
     fonts: {
         regular: 'Nunito_400Regular',

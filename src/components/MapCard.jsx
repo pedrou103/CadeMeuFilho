@@ -6,8 +6,8 @@ const MapCard = () => {
   const { isOpen, onOpen, onClose } = useDisclose();
 
   return (
-    <Center bottom={22}>
-      <Button color="lightBlue.600" onPress={onOpen}>Meus Filhos</Button>
+    <Center flex={1} position="absolute" bottom={16} left={3}>
+      <Button color="green.500" onPress={onOpen}>Ver Filhos</Button>
       <Actionsheet isOpen={isOpen} onClose={onClose}>
         <Actionsheet.Content>
           <Box w="100%" h={60} px={4} justifyContent="center">
@@ -17,7 +17,9 @@ const MapCard = () => {
               Filhos
             </Text>
           </Box>
-          <Actionsheet.Item>Colocar componente dos filho</Actionsheet.Item>
+          <Actionsheet.Item>
+            Onde vão os filhos, se eu conseguir colocar um componente aqui dentro
+          </Actionsheet.Item>
         </Actionsheet.Content>
       </Actionsheet>
     </Center>
