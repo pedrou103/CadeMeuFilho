@@ -19,8 +19,6 @@ export function AuthContextProvider({ children }) {
     })
 
     async function signWithGoogle(access_token) {
-        console.log(`Token de autenticação: ${access_token}`)
-
         try {
             setIsUserLoading(true);
 
@@ -43,10 +41,6 @@ export function AuthContextProvider({ children }) {
             const userTeste = userInfoSchema.parse(userData);
             
             setUser(userTeste);
-            console.log(typeof(userData));
-
-            console.log('')
-            console.log(user)
         } catch (err) {
             console.log(err);
             throw err;
@@ -69,18 +63,16 @@ export function AuthContextProvider({ children }) {
     }
 
     useEffect(() => {
-        console.log('entrou aqui')
         if (response?.type === 'success' && response.authentication?.accessToken) {
             signWithGoogle(response.authentication.accessToken)
         }
-        console.log('aaaaaaaaaaaaaaaaaaaa'+response)
     }, [response])
 
     return (
         <AuthContext.Provider value={{
             signIn,
             isUserLoading,
-            user,
+            user
         }}>
             {children}
         </AuthContext.Provider>

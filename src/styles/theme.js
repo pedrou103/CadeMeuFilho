@@ -19,6 +19,7 @@ export const THEME = extendTheme({
         14: 56,
         15: 60,
         22: 88,
+        30: 120,
         35: 140
     }
 });

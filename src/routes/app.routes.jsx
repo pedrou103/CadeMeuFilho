@@ -2,11 +2,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { useTheme } from "native-base";
 import { House, MapPin, UserPlus, Gear } from "phosphor-react-native";
 import { Platform } from "react-native";
-import { Home } from "../screens/Home";
-import { Profile } from "../screens/Profile";
-import { Register } from "../screens/Register";
-import { Track } from "../screens/Track";
 
+import { Home } from "../screens/Home";
+import { Register } from "../screens/Register";
+import { Settings } from "../screens/Settings";
+import { Track } from "../screens/Track";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -61,8 +61,8 @@ export function RoutesConfig () {
             }}
             />
             <Screen
-            name="profile"
-            component={Profile}
+            name="settings"
+            component={Settings}
             options={{
                 tabBarIcon: ({ color }) => <Gear color={ color } size={size}/>,
                 tabBarLabel: '',

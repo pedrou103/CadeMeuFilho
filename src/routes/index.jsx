@@ -5,12 +5,7 @@ import { Login } from "../screens/Login";
 import { RoutesConfig } from "./app.routes"
 
 export function Routes () {
-    const user = useAuth();
-    // const user = {
-    //     name: 'Pedro',
-    // };
-
-    console.log(`user em Routes ==> ${user.name}`)
+    const {user} = useAuth();
 
     return (
         <Box flex={1} bg="gray.900">
