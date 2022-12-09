@@ -5,11 +5,6 @@ Projeto desenvolvido para a obtenção da nota de AV2 da matéria de Tecnologias
 
 ## Objetivo
 O aplicativo desenvolvido tem o objetivo de fazer o controle de localização de filhos cadastrados, permitindo que os pais/responsáveis consigam saber onde seu filho está através de alguns toques.
-<br>
-
-## Ferramentas
-- Os projeto foi desenvolvido utilizando react-native.
-<br>
 
 ## Como instalar
 A instalação do projeto pode ser feita através dos passos a seguir:
@@ -28,6 +23,8 @@ A instalação do projeto pode ser feita através dos passos a seguir:
 <br>
 
 ## Equipe
-> GitHub: <a href="https://github.com/elquianel">Fracisca Elquiane</a> <br>
-> GitHub: <a href="https://github.com/kaayra01/">Kaira Victória</a> <br>
+> GitHub: <a href="https://github.com/elquianel">Fracisca Elquiane</a>
+<br>
+> GitHub: <a href="https://github.com/kaayra01/">Kaira Victória</a>
+<br>
 > GitHub: <a href="https://github.com/pedrou103/">Pedro Lucas</a> 
