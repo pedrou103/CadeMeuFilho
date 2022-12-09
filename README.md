@@ -17,9 +17,10 @@ A instalação do projeto pode ser feita através dos passos a seguir:
 <br>
 
 ## Como rodar
-- O projeto pode ser rodado através do terminal, depois da instalação com o comando:
+- Para iniciar o servidor, após a instalação, no terminal, basta inserir o comando:
     > npm run start
-    - Caso não consiga acessar o link gerado no seu navegador, aperte a tecla w para que seja aberto automaticamente.
+    - Será gerado um link que pode ser acessado pelo navegador (caso o link quebre, aperte a tecla w para que seja recarregado e abra automaticamente).
+    - Será gerado também um QR Code que pode ser lido através do app <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US">Expo Go</a> no seu celular.
 <br>
 
 ## Equipe
