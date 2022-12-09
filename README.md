@@ -24,7 +24,7 @@ A instalação do projeto pode ser feita através dos passos a seguir:
 
 ## Equipe
 > GitHub: <a href="https://github.com/elquianel">Fracisca Elquiane</a>
-<br>
+
 > GitHub: <a href="https://github.com/kaayra01/">Kaira Victória</a>
-<br>
+
 > GitHub: <a href="https://github.com/pedrou103/">Pedro Lucas</a> 
