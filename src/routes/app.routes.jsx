@@ -20,7 +20,7 @@ export function RoutesConfig () {
             screenOptions={{
                 headerShow: false,
                 tabBarLabelPosition: "below-icon",
-                tabBarActiveTintColor: colors.white,
+                tabBarActiveTintColor: colors.blue[500],
                 tabBarInactiveTintColor: colors.black[300],
                 tabBarStyle: { 
                     position: "absolute",
